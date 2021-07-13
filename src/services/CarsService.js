@@ -3,6 +3,12 @@ import { Car } from '../Models/Car'
 import { api } from './AxiosService'
 
 class CarsService {
+  async addCar(newCar) {
+    const res = await api.post('api/cars', newCar)
+    AppState.cars = res.data
+    this.getCars()
+  }
+
   async getCars() {
     const res = await api.get('api/cars')
     AppState.cars = await res.data.map(c => new Car(c))

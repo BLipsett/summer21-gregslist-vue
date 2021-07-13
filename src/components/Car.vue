@@ -21,7 +21,7 @@
 
         <hr>
 
-        <div class="text-right">
+        <!-- <div class="text-right">
           <router-link :to="{name: 'Profile', params: { id: car.creator.id }}">
             <img :src="car.creator.picture" alt="creator avatar" class="rounded-circle my-2" height="55">
             {{ car.creator.name }}
@@ -35,7 +35,7 @@
           <button class="btn btn-danger btn-block" @click="deleteCar">
             DELETE CAR
           </button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
